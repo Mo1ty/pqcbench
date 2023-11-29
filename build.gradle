@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'com.mo1ty'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation group: 'org.bouncycastle', name: 'bcprov-jdk18on', version: '1.77'
+    implementation group: 'junit', name: 'junit', version: '4.12'
+
+    implementation files('libs/bctest-jdk18on-177.jar')
+
+    // testImplementation group: 'junit', name: 'junit', version: '3.8.2'
+    // testImplementation group: 'junit', name: 'junit', version: '4.12'
+    // testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    // testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
