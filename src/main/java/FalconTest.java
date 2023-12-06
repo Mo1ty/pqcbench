@@ -15,9 +15,11 @@ public class FalconTest {
 
     public static final String algName = "FALCON";
 
-    public static void main(String[] args) throws InvalidAlgorithmParameterException, NoSuchAlgorithmException, NoSuchProviderException {
+    public static void initTest() throws InvalidAlgorithmParameterException, NoSuchAlgorithmException, NoSuchProviderException {
+        System.out.println("!-----------------------------" + algName + "-------------------------------!");
         keyGenSpeedTest();
         encapsDecapsSpeedTest();
+        System.out.println("!-------------------------------------------------------------!");
     }
 
     private static void keyGenSpeedTest() throws NoSuchAlgorithmException, NoSuchProviderException, InvalidAlgorithmParameterException {
